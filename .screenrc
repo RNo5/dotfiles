@@ -1,0 +1,249 @@
+# (Ref) https://gist.github.com/piyo/133000
+# ----------------------------------------------------------------------
+# Keybindings 
+# ----------------------------------------------------------------------
+
+# Set escape key to "C-o"
+escape ^oo
+
+## 123 row
+
+                                                  #def# bind 1      select 1
+                                                  #def# bind 2      select 2
+                                                  #def# bind 3      select 3
+                                                  #def# bind 4      select 4
+                                                  #def# bind 5      select 5
+                                                  #def# bind 6      select 6
+                                                  #def# bind 7      select 7
+                                                  #def# bind 8      select 8
+                                                  #def# bind 9      select 9
+                                                  #def# bind 0      select 0
+                                                  #def# bind -      select -
+                                                  #def# bind =    windowlist -b
+                                                  #def# bind ^^
+                                                  #def# bind ~
+                                                  #def# bind |      split -v
+
+
+## qwerty row
+
+                                                  #def# bind "q"    xon
+                                                  #def# bind "Q"    only
+                                                  #def# bind "^q"   xon
+                                                  #def# bind "w"    windows
+                                                  #def# bind "W"    width
+                                                  #def# bind "^w"   windows
+                                                  #def# bind "e"
+                                                  #def# bind "E"
+bind "^e" focus up                                #def# bind "^e"
+                                                  #def# bind "r"    wrap
+                                                  #def# bind "R"
+                                                  #def# bind "^r"   wrap
+                                                  #def# bind "t"    time
+                                                  #def# bind "T"
+                                                  #def# bind "^t"   time
+                                                  #def# bind "y"
+                                                  #def# bind "Y"
+                                                  #def# bind "^y"
+                                                  #def# bind "u"
+                                                  #def# bind "U"
+                                                  #def# bind "^u"
+                                                  #def# bind "i"    info
+                                                  #def# bind "I"
+                                                  #def# bind "^i"   focus
+                                                  #def# bind "o"
+                                                  #def# bind "O"
+                                                  #def# bind "^o"
+                                                  #def# bind "p"    prev
+                                                  #def# bind "P"
+                                                  #def# bind "^p"   prev
+                                                  #def# bind "@"
+                                                  #def# bind "^@"   next
+                                                  #def# bind "'"    select
+                                                  #def# bind "["    copy
+                                                  #def# bind "^["   copy
+                                                  #def# bind "{"    history
+                                                  #def# bind "^{"
+
+## asdf row
+
+                                                  #def# bind "a"    meta
+                                                  #def# bind "A"    title
+bind "^a"   sessionname                           #def# bind "^a"   other
+                                                  #def# bind "s"    xoff
+                                                  #def# bind "S"    split
+bind "^s"   prev                                  #def# bind "^s"   xoff
+                                                  #def# bind "d"    detach
+                                                  #def# bind "D"    pow_detach
+bind "^d"   focus down                            #def# bind "^d"   detach
+                                                  #def# bind "f"    flow
+                                                  #def# bind "F"    fit
+bind "^f"   next                                  #def# bind "^f"   flow
+                                                  #def# bind "g"
+                                                  #def# bind "G"
+bind ^g     version                               #def# bind "^g"   vbell
+                                                  #def# bind "h"    hardcopy
+                                                  #def# bind "H"    log
+                                                  #def# bind "^h"   prev
+                                                  #def# bind "j"
+                                                  #def# bind "J"
+                                                  #def# bind "^j"
+                                                  #def# bind "k"    kill
+                                                  #def# bind "K"
+                                                  #def# bind "^k"   kill
+                                                  #def# bind "l"    redisplay
+                                                  #def# bind "L"    login
+                                                  #def# bind "^l"   redisplay
+                                                  #def# bind ";"
+                                                  #def# bind ";"
+                                                  #def# bind "^;"
+                                                  #def# bind "+"
+                                                  #def# bind ":"    colon
+                                                  #def# bind "*"    displays
+                                                  #def# bind "]"    paste .
+                                                  #def# bind "^]"   paste .
+                                                  #def# bind "}"    history
+                                                  #def# bind "^}"
+
+## zxcv row
+
+                                                  #def# bind "z"    suspend
+                                                  #def# bind "Z"    reset
+                                                  #def# bind "^z"   suspend
+bind "x"  command -c emacsx                       #def# bind "x"    lockscreen
+                                                  #def# bind "X"    remove
+bind "^x" command -c emacsx                       #def# bind "^x"   lockscreen
+bind "c"  copy                                    #def# bind "c"    screen
+                                                  #def# bind "C"    clear
+bind "^c" copy                                    #def# bind "^c"   screen
+bind "v"  paste .                                 #def# bind "v"    version
+bind "V"  digraph                                 #def# bind "V"
+bind "^v" paste .                                 #def# bind "^v"   digraph
+                                                  #def# bind "b"    break
+                                                  #def# bind "B"    pow_break
+                                                  #def# bind "^b"   break
+bind "n"  screen                                  #def# bind "n"    next
+                                                  #def# bind "N"    number
+bind "^n" screen                                  #def# bind "^n"   next
+                                                  #def# bind "m"    lastmsg
+                                                  #def# bind "M"    monitor
+                                                  #def# bind "^m"   lastmsg
+                                                  #def# bind ","    license
+                                                  #def# bind "<"    readbuf
+                                                  #def# bind "^<"
+                                                  #def# bind "."    dumptermcap
+                                                  #def# bind ">"    writebuf
+                                                  #def# bind "^>"
+                                                  #def# bind "/"
+                                                  #def# bind "^/"
+                                                  #def# bind "?"    help
+                                                  #def# bind "^?"   prev
+                                                  #def# bind "\"
+                                                  #def# bind "^\"   quit
+                                                  #def# bind "_"    silence
+                                                  #def# bind "^_"
+
+
+
+
+## Spacebar row
+                                                  #def# bind "sp"   next
+
+## Submenus
+
+# make the interface like emacs
+bind -c emacsx "1" only
+bind -c emacsx "2" split
+bind -c emacsx "3" split -v
+bind -c emacsx "o" focus
+bind -c emacsx "b" windowlist
+
+# ----------------------------------------------------------------------
+# Behavior
+# ----------------------------------------------------------------------
+shell $SHELL
+
+# Disable start up message
+startup_message off
+
+# auto detatch when hang up
+autodetach on
+
+# If set to on, "alternate screen" support is enabled in virtual terminals, just like in xterm. Initial setting is ‘off’.
+altscreen on
+
+# Set scroll back number
+defscrollback 10000
+
+
+# 現在の背景色で消去する
+defbce "on"
+
+# 256対応
+term xterm-256color
+termcapinfo xterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
+
+# ログファイルのファイル名
+logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
+# 標準でログをとる
+#deflog on
+
+# ----------------------------------------------------------------------
+# Visuals
+# ----------------------------------------------------------------------
+
+# Caption for each window
+# setenv a ""
+# setenv a "$a%?%F"     # if the window has the focus
+# setenv a "$a%{=d Wk}" #   set attribute = {dim, black(k) on bright Write(W)}
+# setenv a "$a%:"       # else
+# setenv a "$a%{=d Kk}" #   set attribute = {dim, black(k) on bright Black(K)}
+# setenv a "$a%?"       # end if
+# setenv a "$a%?%P"     # if copy/paste mode
+# setenv a "$a%{=d Bk}" #   set attribute = {dim, black(k) on bright Blue(B)}
+# setenv a "$a%?"       # end if
+# setenv a "$a%n"       # window number
+# setenv a "$a "        # space
+# setenv a "$a%w"        # directory path
+# setenv a "$a%L="      # Mark the position for the next truncation
+# setenv a "$a%h"       # window' hardstatus
+# setenv a "$a%L>"      # Truncate %L= ~ %L>, 'L' for > gives marks at the truncation point
+# setenv a "$a%="       # With the last %-0=, it makes right alignment for following lines
+
+# setenv a "$a%?%P"     # if copy/paste mode
+# setenv a "$a  *copy/paste*" # draw this sentence
+# setenv a "$a%?"       # end if
+# setenv a "$a%?%E"     # if copy/paste mode
+# setenv a "$a  ***command**" # draw this sentence
+# setenv a "$a%?"       # end if
+# setenv a "$a%-0="     # pad the string to the display's width. "-0" means
+                      # start from the rightest side
+                      # (e.g. 10=: 10% from left, 010, 10 characters from left
+                      # (     -10=: 10% from right)
+                      # With %L>, %= above, screen tries to truncates the part 
+                      # in the left of "%L>"
+
+# 非表示
+# caption always "$a"
+# unsetenv a
+
+
+# hardstatus
+setenv a ""
+setenv a "$a%L="               # Mark the position for the next truncation
+setenv a "$a%L=%{= .y}"        # set attribute = {yellow(y) on the current background)}
+setenv a "$a[%H (%101`)]"      # set hostname and IP address
+setenv a "$a "                 # space
+setenv a "$a%{= .w}%-w%46>"    # windows list up to the current window
+setenv a "$a%{=bu .r}%n %t*"   # current window number and window title
+setenv a "$a%{= .w}%+w%46>"    # windows' list starting with the window after the current one
+
+hardstatus alwayslastline "$a"
+unsetenv a
+
+## current command name as window name
+shelltitle "$ |title"
+
+
+# get IP address from script (whatismyip)
+backtick 101 3600 0 sh -c "$HOME/bin/whatismyip.sh"
