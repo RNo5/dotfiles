@@ -2,7 +2,8 @@
 ;; GNU GLOBAL(gtags)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; makeしたglobal-xxxからgtags.elを下記のパスにコピーしたので、load-pathに追加
-(setq load-path (cons "~/.emacs.d/site-lisp/gtags/" load-path))
+;(setq load-path (cons "~/.emacs.d/site-lisp/gtags/" load-path))
+
 (autoload 'gtags-mode "gtags" "" t)
 ;; キーバインド
 (setq gtags-mode-hook

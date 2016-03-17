@@ -68,7 +68,20 @@
 ;;   (setq el-get-dir (expand-file-name "el-get" versioned-dir)
 ;;         package-user-dir (expand-file-name "elpa" versioned-dir)))
 
-(add-to-list 'load-path (locate-user-emacs-file "lisp/el-get"))
+
+;;; サブディレクトリごとload-pathに追加する関数を定義
+(defun add-to-load-path (&rest paths)
+  (let (path)
+    (dolist (path paths paths)
+     (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
+        (add-to-list 'load-path default-directory)
+         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+             (normal-top-level-add-subdirs-to-load-path))))))
+
+;;; ディレクトリをサブディレクトリごとload-pathに追加
+(add-to-load-path "lisp")
+
+;(add-to-list 'load-path (locate-user-emacs-file "lisp/el-get"))
 (require 'el-get)
 
 
@@ -76,7 +89,7 @@
 ;; Precondition: cl-lib needs to be installed via wget
 ;; wget http://elpa.gnu.org/packages/cl-lib-0.5.el
 ;; mv cl-lib-0.5.el cl-lib.el
-(add-to-list 'load-path (locate-user-emacs-file "lisp/cl-lib"))
+;(add-to-list 'load-path (locate-user-emacs-file "lisp/cl-lib"))
 (require 'cl-lib)
 
 

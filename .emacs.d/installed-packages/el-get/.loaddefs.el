@@ -5,8 +5,8 @@
 
 ;;;### (autoloads (anzu-replace-at-cursor-thing anzu-query-replace-regexp
 ;;;;;;  anzu-query-replace anzu-query-replace-at-cursor-thing anzu-query-replace-at-cursor
-;;;;;;  global-anzu-mode anzu-mode) "anzu/anzu" "anzu/anzu.el" (22248
-;;;;;;  63563))
+;;;;;;  global-anzu-mode anzu-mode) "anzu/anzu" "anzu/anzu.el" (22250
+;;;;;;  5447))
 ;;; Generated autoloads from anzu/anzu.el
 
 (autoload 'anzu-mode "anzu/anzu" "\
@@ -64,7 +64,7 @@ See `anzu-mode' for more information on Anzu mode.
 
 ;;;### (autoloads (auto-highlight-symbol-mode global-auto-highlight-symbol-mode)
 ;;;;;;  "auto-highlight-symbol/auto-highlight-symbol" "auto-highlight-symbol/auto-highlight-symbol.el"
-;;;;;;  (22248 63548))
+;;;;;;  (22250 5431))
 ;;; Generated autoloads from auto-highlight-symbol/auto-highlight-symbol.el
 
 (defvar global-auto-highlight-symbol-mode nil "\
@@ -96,7 +96,7 @@ Toggle Auto Highlight Symbol Mode
 ;;;***
 
 ;;;### (autoloads (c-eldoc-print-current-symbol-info c-turn-on-eldoc-mode)
-;;;;;;  "c-eldoc/c-eldoc" "c-eldoc/c-eldoc.el" (22248 63529))
+;;;;;;  "c-eldoc/c-eldoc" "c-eldoc/c-eldoc.el" (22250 5409))
 ;;; Generated autoloads from c-eldoc/c-eldoc.el
 
 (autoload 'c-turn-on-eldoc-mode "c-eldoc/c-eldoc" "\
@@ -112,7 +112,7 @@ Returns documentation string for the current symbol.
 ;;;***
 
 ;;;### (autoloads (er/expand-region) "expand-region/expand-region"
-;;;;;;  "expand-region/expand-region.el" (22248 63535))
+;;;;;;  "expand-region/expand-region.el" (22250 5420))
 ;;; Generated autoloads from expand-region/expand-region.el
 
 (autoload 'er/expand-region "expand-region/expand-region" "\
@@ -132,7 +132,7 @@ before calling `er/expand-region' for the first time.
 ;;;;;;  expand-region-skip-whitespace expand-region-autocopy-register
 ;;;;;;  expand-region-guess-python-mode expand-region-preferred-python-mode
 ;;;;;;  expand-region) "expand-region/expand-region-custom" "expand-region/expand-region-custom.el"
-;;;;;;  (22248 63535))
+;;;;;;  (22250 5420))
 ;;; Generated autoloads from expand-region/expand-region-custom.el
 
 (let ((loads (get 'expand-region 'custom-loads))) (if (member '"expand-region/expand-region-custom" loads) nil (put 'expand-region 'custom-loads (cons '"expand-region/expand-region-custom" loads))))
@@ -183,7 +183,7 @@ List of modes which derive from `text-mode' for which text mode expansions are n
 
 ;;;### (autoloads (ggtags-try-complete-tag ggtags-build-imenu-index
 ;;;;;;  ggtags-mode ggtags-find-tag-dwim ggtags-find-project) "ggtags/ggtags"
-;;;;;;  "ggtags/ggtags.el" (22248 63521))
+;;;;;;  "ggtags/ggtags.el" (22250 5405))
 ;;; Generated autoloads from ggtags/ggtags.el
 
 (autoload 'ggtags-find-project "ggtags/ggtags" "\
@@ -228,7 +228,7 @@ A function suitable for `hippie-expand-try-functions-list'.
 ;;;;;;  highlight-symbol-next-in-defun highlight-symbol-prev highlight-symbol-next
 ;;;;;;  highlight-symbol-count highlight-symbol-list-all highlight-symbol-remove-all
 ;;;;;;  highlight-symbol highlight-symbol-mode) "highlight-symbol/highlight-symbol"
-;;;;;;  "highlight-symbol/highlight-symbol.el" (22248 63540))
+;;;;;;  "highlight-symbol/highlight-symbol.el" (22250 5425))
 ;;; Generated autoloads from highlight-symbol/highlight-symbol.el
 
 (autoload 'highlight-symbol-mode "highlight-symbol/highlight-symbol" "\
@@ -316,7 +316,7 @@ before if NLINES is negative.
 ;;;***
 
 ;;;### (autoloads (init-loader-show-log init-loader-load) "init-loader/init-loader"
-;;;;;;  "init-loader/init-loader.el" (22248 63515))
+;;;;;;  "init-loader/init-loader.el" (22250 5397))
 ;;; Generated autoloads from init-loader/init-loader.el
 
 (autoload 'init-loader-load "init-loader/init-loader" "\
@@ -345,7 +345,7 @@ Show init-loader log buffer.
 ;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/subword-mode-expansions.el"
 ;;;;;;  "expand-region/text-mode-expansions.el" "expand-region/the-org-mode-expansions.el"
 ;;;;;;  "expand-region/web-mode-expansions.el" "init-loader/test-init-loader.el"
-;;;;;;  "smartrep/smartrep.el") (22248 63566 701762))
+;;;;;;  "smartrep/smartrep.el") (22250 5457 222567))
 
 ;;;***
 
