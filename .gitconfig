@@ -1,0 +1,8 @@
+[include]
+# private setting such as proxy
+path=.gitconfig.private
+[url "https://"]
+insteadOf = git://
+[user]
+name = RNo5
+email = numayama2009@gmail.com
