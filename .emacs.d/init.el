@@ -34,11 +34,18 @@
 ;; emacs -l init.el : change the directory for user-emacs-directory
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
-(add-to-list 'load-path user-emacs-directory)
 
+;;; サブディレクトリごとload-pathに追加する関数を定義
+(defun add-to-load-path (&rest paths)
+  (let (path)
+    (dolist (path paths paths)
+     (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
+        (add-to-list 'load-path default-directory)
+         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+             (normal-top-level-add-subdirs-to-load-path))))))
 
-
-(add-to-list 'load-path (locate-user-emacs-file "private"))
+;;; ディレクトリをサブディレクトリごとload-pathに追加
+(add-to-load-path "private")
 
 ;; load proxy setting
 (when (file-exists-p (locate-user-emacs-file "private/my-proxy.el"))
@@ -68,15 +75,6 @@
 ;;   (setq el-get-dir (expand-file-name "el-get" versioned-dir)
 ;;         package-user-dir (expand-file-name "elpa" versioned-dir)))
 
-
-;;; サブディレクトリごとload-pathに追加する関数を定義
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-     (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
-        (add-to-list 'load-path default-directory)
-         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;;; ディレクトリをサブディレクトリごとload-pathに追加
 (add-to-load-path "lisp")
