@@ -8,7 +8,7 @@ HISTIGNORE=ls:history
 
 # private setting such as proxy
 if [ -f ~/.bashrc.private ]; then
-    source .bashrc.private
+    source ~/.bashrc.private
 fi
 
 # インストールしたファイルのパス（環境設定）
