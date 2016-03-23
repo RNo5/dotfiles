@@ -8,9 +8,9 @@ Thumbs.db
 #---------------------------
 # .emacs.d/
 #---------------------------
-.emacs.d/auto-save-list/
-.emacs.d/installed-package
-.emacs.d/private
+/.emacs.d/auto-save-list
+/.emacs.d/installed-packages
+/.emacs.d/private
 
 # Compiled
 *.elc
