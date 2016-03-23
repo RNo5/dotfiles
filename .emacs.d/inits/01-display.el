@@ -28,8 +28,8 @@
 (setq lazy-highlight-initial-delay 0)
 
 ;; 行番号を表示
+(require 'linum)
 (global-linum-mode t)
-
 ;;5 桁分の領域を確保して行番号のあとにスペースを入れる
 (setq linum-format "%4d  ")
 
