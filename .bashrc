@@ -6,7 +6,7 @@ HISTFILESIZE=10000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 HISTIGNORE=ls:history
 
-# private setting
+# private setting such as proxy
 if [ -f ~/.bashrc.private ]; then
     source .bashrc.private
 fi

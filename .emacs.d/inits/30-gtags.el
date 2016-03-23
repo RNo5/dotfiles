@@ -6,7 +6,7 @@
 
 (autoload 'gtags-mode "gtags" "" t)
 ;; キーバインド
-(setq gtags-mode-hook
+(defvar gtags-mode-hook
       '(lambda ()
          (local-set-key "\M-t" 'gtags-find-tag)           ;関数の定義元へ
          (local-set-key "\M-r" 'gtags-find-rtag)          ;関数の参照元へ
@@ -22,4 +22,4 @@
 
 ;;emacsからのgtagsの呼び出しが上手くいかないので追記
 ;;rootからの相対パスでなく現在位置からの相対パスに
-(setq gtags-path-style 'relative)
+(defvar gtags-path-style 'relative)
