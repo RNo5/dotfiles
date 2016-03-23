@@ -237,6 +237,8 @@ setenv a "$a "                 # space
 setenv a "$a%{= .w}%-w%46>"    # windows list up to the current window
 setenv a "$a%{=bu .r}%n %t*"   # current window number and window title
 setenv a "$a%{= .w}%+w%46>"    # windows' list starting with the window after the current one
+setenv a "$a%=%Y/%m/%d %02c"   # Date and Time at the right corner (truncation/paddion point)
+
 
 hardstatus alwayslastline "$a"
 unsetenv a
