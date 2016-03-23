@@ -1,11 +1,15 @@
 # .bashrc for interactive terminal (for example, sftp)
 [ -z "$PS1" ] && return
 
-
 HISTSIZE=10000
 HISTFILESIZE=10000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 HISTIGNORE=ls:history
+
+# private setting
+if [ -f ~/.bashrc.private ]; then
+    source .bashrc.private
+fi
 
 # インストールしたファイルのパス（環境設定）
 export PATH=$HOME/bin:$PATH
