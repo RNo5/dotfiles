@@ -11,6 +11,7 @@ Thumbs.db
 /.emacs.d/auto-save-list
 /.emacs.d/installed-packages
 /.emacs.d/private
+/.emacs.d/ac-comphist.dat
 
 # Compiled
 *.elc
