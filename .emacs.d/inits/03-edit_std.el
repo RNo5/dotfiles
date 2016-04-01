@@ -35,3 +35,11 @@
   (setq whitespace-display-mappings
           '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
   (global-whitespace-mode 1))
+
+;; ----------------------------
+;; Setting for dired
+;; ----------------------------
+;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
+(setq dired-dwim-target t)
+;; ディレクトリを再帰的にコピーする
+(setq dired-recursive-copies 'always)

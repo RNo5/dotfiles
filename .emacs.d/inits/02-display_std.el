@@ -8,8 +8,15 @@
 
 ;; ツールバー非表示
 (tool-bar-mode 0)
+
 ;; メニューバー非表示
 (menu-bar-mode 0)
+
+;; タイトルバーにファイルのフルパス表示
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+                    '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
 
 ;; 現在の行をハイライト表示する
 ;(setq hl-line-face 'underline) ; 下線

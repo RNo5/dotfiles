@@ -26,8 +26,9 @@
 ;; ============================================================
 (el-get-bundle auto-complete)
 (el-get-bundle auto-complete-c-headers)
+(el-get-bundle emacsmirror/sr-speedbar)
 (el-get-bundle c-eldoc)
-;;(el-get-bundle ggtags)
+(el-get-bundle ggtags)
 
 
 
