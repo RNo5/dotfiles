@@ -15,8 +15,15 @@ fi
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
 
+export PYTHONPATH=$HOME/usr/lib/python2.7/site-packages:$PYTHONPATH
+
 #ifconfig等へのパス
 export PATH=$PATH:/sbin/
+
+# global, gtags, 
+# export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+export GTAGSLABEL=pygments
+
 
 # Required by Makefile for dotfiles. Put something this in your .bashrc or .zshrc
 [ -f ~/.path ] && . ~/.path
@@ -27,7 +34,12 @@ export PATH=$PATH:/sbin/
 # list-color-display
 alias emacs='TERM=xterm-256color emacs -nw'
 
+# change colors for ls command
+if [ -f $HOME/.dir_colors ] &&  type -P dircolors >/dev/null ; then 
+    eval 'dircolors $HOME/.dir_colors >/dev/null'
+fi
 alias la='ls -la --color=always'
+
 
 # screen自動起動
 # すでに screen セッションがある場合そこに接続し、なければ作成する。
@@ -38,10 +50,10 @@ screen -xR
 # そうでなければ現在の作業ディレクトリ名に自動で設定する．
 ## .bashrc側の設定 (.screenrcの設定も必要)
 if [ -n "$STY" ]; then
-    export PS1='\u@\h:\W\$ '
+    export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
     export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename $(pwd))\033\\"'
 else
-    export PS1='\u@\h:\W\$ '
+    export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
 fi
 
 
