@@ -1,6 +1,10 @@
 # .bashrc for interactive terminal (for example, sftp)
 [ -z "$PS1" ] && return
 
+# screen自動起動
+# すでに screen セッションがある場合そこに接続し、なければ作成する。
+screen -xR
+
 HISTSIZE=10000
 HISTFILESIZE=10000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
@@ -35,15 +39,13 @@ export GTAGSLABEL=pygments
 alias emacs='TERM=xterm-256color emacs -nw'
 
 # change colors for ls command
-if [ -f $HOME/.dir_colors ] &&  type -P dircolors >/dev/null ; then 
-    eval 'dircolors $HOME/.dir_colors >/dev/null'
-fi
+# if [ -f $HOME/.dir_colors ] &&  type -P dircolors >/dev/null ; then 
+#     eval 'dircolors -b $HOME/.dir_colors >/dev/null'
+# fi
+export LS_COLORS='di=00;33'
 alias la='ls -la --color=always'
 
 
-# screen自動起動
-# すでに screen セッションがある場合そこに接続し、なければ作成する。
-screen -xR
 
 
 # screenの各ウィンドウのタイトルを，コマンド実行中はそのコマンド名に自動で設定し
