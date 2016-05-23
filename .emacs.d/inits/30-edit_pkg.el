@@ -2,8 +2,8 @@
   :defer t
 
   :bind
-  (("C-c r" . anzu-query-replace)
-   ("C-c R" . anzu-query-replace-regexp))
+  ("C-c r" . anzu-query-replace)
+  ("C-c R" . anzu-query-replace-regexp)
 
   :config
   (setq anzu-search-threshold 100)
