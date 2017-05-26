@@ -8,7 +8,7 @@
 ;; 20-display_pkg
 ;; ============================================================
 (el-get-bundle highlight-symbol)
-;;(el-get-bundle auto-highlight-symbol)
+(el-get-bundle auto-highlight-symbol)
 
 
 

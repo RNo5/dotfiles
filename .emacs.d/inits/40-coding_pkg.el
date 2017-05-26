@@ -11,27 +11,27 @@
   (setq ac-use-menu-map t)                   ;; 補完メニュー表示時にC-n/C-pで補完候補選択
   (setq ac-use-fuzzy t))                     ;; 曖昧マッチ
 
-(use-package sr-speedbar
-  :defer t
-  :bind
-  ("<f6>" . sr-speedbar-toggle)
-  :config
-  (sr-speedbar-refresh-turn-off)
-  (setq sr-speedbar-right-side nil))
+;; (use-package sr-speedbar
+;;   :defer t
+;;   :bind
+;;   ("<f6>" . sr-speedbar-toggle)
+;;   :config
+;;   (sr-speedbar-refresh-turn-off)
+;;   (setq sr-speedbar-right-side nil))
 
-(use-package c-eldoc
-  :defer t
+;; (use-package c-eldoc
+;;   :defer t
 
-  :commands
-  (c-turn-on-eldoc-mode)
+;;   :commands
+;;   (c-turn-on-eldoc-mode)
 
-  :init
-  (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-  (add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
+;;   :init
+;;   (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
+;;   (add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
 
-  :config
-  (setq c-eldoc-buffer-regenerate-time 60)
-  (set (make-local-variable 'eldoc-idle-delay) 0.20))
+;;   :config
+;;   (setq c-eldoc-buffer-regenerate-time 60)
+;;   (set (make-local-variable 'eldoc-idle-delay) 0.20))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

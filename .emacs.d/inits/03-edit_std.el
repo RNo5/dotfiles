@@ -16,7 +16,7 @@
 
 ;;基本オフセットというのは、 1 段インデントをする際のサイズです。
 ;;c-basic-offset はバッファーローカルな変数です。
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 2)
 ;; インデントの際にタブを使わずに、 空白(スペース)のみ使用する
 (setq-default indent-tabs-mode nil)
 

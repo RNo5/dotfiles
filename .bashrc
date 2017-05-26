@@ -20,6 +20,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
 
 export PYTHONPATH=$HOME/usr/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=$HOME/usr/lib/python3.4/site-packages:$PYTHONPATH
 
 #ifconfig等へのパス
 export PATH=$PATH:/sbin/
@@ -43,7 +44,7 @@ alias emacs='TERM=xterm-256color emacs -nw'
 #     eval 'dircolors -b $HOME/.dir_colors >/dev/null'
 # fi
 export LS_COLORS='di=00;33'
-alias la='ls -la --color=always'
+alias la='ls -lah --color=always'
 
 
 
