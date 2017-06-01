@@ -1,6 +1,8 @@
 (use-package anzu
-  :defer t
 
+  :init
+  (anzu-mode +1)
+  
   :bind
   ("C-c r" . anzu-query-replace)
   ("C-c R" . anzu-query-replace-regexp)

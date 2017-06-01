@@ -20,7 +20,23 @@
 
 ;; 現在の行をハイライト表示する
 ;(setq hl-line-face 'underline) ; 下線
-(global-hl-line-mode)
+;(global-hl-line-mode)
+
+;; global-hl-line-modeを使う代わりにタイマー
+;; この設定で0.03秒後に現在行がハイライトされるようになります。
+(use-package hl-line
+  
+  :config
+   ;;; hl-lineを無効にするメジャーモードを指定する
+  (defvar global-hl-line-timer-exclude-modes '(todotxt-mode))
+  (defun global-hl-line-timer-function ()
+    (unless (memq major-mode global-hl-line-timer-exclude-modes)
+      (global-hl-line-unhighlight-all)
+      (let ((global-hl-line-mode t))
+        (global-hl-line-highlight))))
+  (defvar global-hl-line-timer
+        (run-with-idle-timer 0.1 t 'global-hl-line-timer-function)))
+
 
 ;;;括弧をハイライト
 (show-paren-mode t)
