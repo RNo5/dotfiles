@@ -16,18 +16,18 @@
 ;; 30-edit_pkg
 ;; ============================================================
 (el-get-bundle anzu)
-(el-get-bundle expand-region)
-(el-get-bundle multiple-cursors)
-(el-get-bundle smartrep)
+;;(el-get-bundle expand-region)
+;;(el-get-bundle multiple-cursors)
+;;(el-get-bundle smartrep)
 
 
 ;; ============================================================
 ;; 40-coding_pkg
 ;; ============================================================
 (el-get-bundle auto-complete)
-(el-get-bundle auto-complete-c-headers)
-(el-get-bundle emacsmirror/sr-speedbar)
-(el-get-bundle c-eldoc)
+;;(el-get-bundle auto-complete-c-headers)
+;;(el-get-bundle emacsmirror/sr-speedbar)
+;;(el-get-bundle c-eldoc)
 (el-get-bundle ggtags)
 
 
