@@ -233,7 +233,7 @@ logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
 # hardstatus
 setenv a ""
 setenv a "$a%L="               # Mark the position for the next truncation
-setenv a "$a%L=%{= ky}"        # set attribute = {yellow(y) on the current background)}
+setenv a "$a%L=%{= km}"        # set attribute = {magenta(m) on the current background)}
 setenv a "$a[%H (%101`)]"      # set hostname and IP address
 setenv a "$a "                 # space
 setenv a "$a%{= .w}%-w%46>"    # windows list up to the current window
