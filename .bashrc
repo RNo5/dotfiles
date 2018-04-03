@@ -1,6 +1,11 @@
 # .bashrc for interactive terminal (for example, sftp)
 [ -z "$PS1" ] && return
 
+#stop terminal output lock (Ctrl + S)
+stty stop undef
+
+export SCREENDIR=$HOME/.screen
+
 # screen自動起動
 # すでに screen セッションがある場合そこに接続し、なければ作成する。
 screen -xR
@@ -54,7 +59,8 @@ alias la='ls -lah --color=always'
 ## .bashrc側の設定 (.screenrcの設定も必要)
 if [ -n "$STY" ]; then
     export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
-    export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename $(pwd))\033\\"'
+    export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename "$(pwd)")\033\\"'
+#    export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename $(pwd))\033\\"'
 else
     export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
 fi
