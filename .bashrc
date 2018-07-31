@@ -81,3 +81,6 @@ alias route='cocot route'
 alias netstat='cocot netstat'
 
 fi
+
+# X server for WSL
+export DISPLAY=localhost:0.0

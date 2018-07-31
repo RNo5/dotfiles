@@ -4,7 +4,7 @@
 # ----------------------------------------------------------------------
 
 # Set escape key to "C-o"
-escape ^oo
+escape ^uu
 
 ## 123 row
 
@@ -177,6 +177,8 @@ defscrollback 10000
 
 # scroll by mouse
 termcapinfo xterm* ti@:te@
+termcapinfo linux ti@:te@
+
 
 # 現在の背景色で消去する
 defbce "on"
