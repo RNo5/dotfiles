@@ -1,8 +1,14 @@
 [include]
 # private setting such as proxy
-path=.gitconfig.private
+     path=.gitconfig.private
 [url "https://"]
-insteadOf = git://
+    insteadOf = git://
 [user]
-name = RNo5
-email = numayama2009@gmail.com
+#    name = RNo5
+#    email = numayama2009@gmail.com
+    name = Akira Numayama
+    email = akira.numayama@jp.ricoh.com
+[color]
+    ui = auto
+[alias]
+   tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
