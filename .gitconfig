@@ -4,10 +4,8 @@
 [url "https://"]
     insteadOf = git://
 [user]
-#    name = RNo5
-#    email = numayama2009@gmail.com
-    name = Akira Numayama
-    email = akira.numayama@jp.ricoh.com
+    name = RNo5
+    email = numayama2009@gmail.com
 [color]
     ui = auto
 [alias]
