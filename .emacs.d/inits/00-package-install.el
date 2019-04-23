@@ -16,6 +16,7 @@
 ;; 30-edit_pkg
 ;; ============================================================
 (el-get-bundle anzu)
+(el-get-bundle visual-regexp)
 ;;(el-get-bundle expand-region)
 ;;(el-get-bundle multiple-cursors)
 ;;(el-get-bundle smartrep)

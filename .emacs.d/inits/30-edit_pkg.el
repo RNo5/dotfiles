@@ -4,13 +4,22 @@
   (anzu-mode +1)
   
   :bind
-  ("C-c r" . anzu-query-replace)
-  ("C-c R" . anzu-query-replace-regexp)
+;;  ("C-c r" . anzu-query-replace-regexp)
+;;  ("C-c R" . anzu-query-replace-regexp)
 
   :config
   (setq anzu-search-threshold 100)
   (setq anzu-minimum-input-length 3)
   (global-anzu-mode +1))
+
+(use-package visual-regexp
+
+  :init
+  
+  :bind
+  ("C-c r" . vr/replace)
+  ("C-c q" . vr/query-replace)
+  ("C-c m" . vr/mc-mark))
 
 
 ;; (use-package expand-region
