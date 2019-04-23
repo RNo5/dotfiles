@@ -50,6 +50,8 @@ alias emacs='TERM=xterm-256color emacs -nw'
 # fi
 export LS_COLORS='di=00;33'
 alias la='ls -lah --color=always'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 which emacs > /dev/null 2>&1
 if [ $? == 0 ]; then
