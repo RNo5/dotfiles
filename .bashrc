@@ -24,8 +24,17 @@ fi
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
 
+LD_LIBRARY_PATH=$HOME/usr/lib64/:$HOME/usr/lib/$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/usr/lib64/pkgconfig/:$HOME/usr/lib/pkgconfig/
+export PKG_CONFIG_PATH
+
+
+alias python='/usr/bin/python3'
 export PYTHONPATH=$HOME/usr/lib/python2.7/site-packages:$PYTHONPATH
 export PYTHONPATH=$HOME/usr/lib/python3.4/site-packages:$PYTHONPATH
+export PYTHONPATH=$HOME/usr/lib/python3.6/site-packages:$PYTHONPATH
 
 #ifconfig等へのパス
 export PATH=$PATH:/sbin/
@@ -90,3 +99,7 @@ fi
 
 # X server for WSL
 export DISPLAY=localhost:0.0
+
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
