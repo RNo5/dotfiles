@@ -30,6 +30,7 @@
 ;;(el-get-bundle emacsmirror/sr-speedbar)
 ;;(el-get-bundle c-eldoc)
 (el-get-bundle ggtags)
+(el-get-bundle nsis-mode)
 
 
 

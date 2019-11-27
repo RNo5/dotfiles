@@ -99,3 +99,12 @@
 ;;              (local-set-key (kbd "M-s") 'helm-gtags-show-stack)
 ;;              (local-set-key (kbd "M-p") 'helm-gtags-previous-history)
 ;;              (local-set-key (kbd "M-n") 'helm-gtags-next-history)))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NSIS-mode: https://github.com/mattfidler/nsis-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(use-package nsis-mode
+    :defer t)
