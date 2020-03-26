@@ -23,7 +23,8 @@
 ;; 全角スペースおよびタブの可視化
 (use-package whitespace
   :defer t
-
+  :init
+  (whitespace-mode +1)
   :config
   (setq whitespace-style '(face           ; faceで可視化
                            trailing       ; 行末
@@ -31,12 +32,15 @@
                            empty          ; 先頭/末尾の空行
                            space-mark     ; 表示のマッピング
                            tab-mark
+                           indentation
+                           space-after-tab
                            ))
   (setq whitespace-display-mappings
           '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
-  (global-whitespace-mode 1))
+  (global-whitespace-mode 1)
+  :bind
+  ("C-c w" . whitespace-mode))
 
-;; ----------------------------
 ;; Setting for dired
 ;; ----------------------------
 ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
@@ -49,6 +53,6 @@
 ;; Setting for ediff
 ;; ----------------------------
 ;; コントロール用のバッファを同一フレーム内に表示
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+(defvar ediff-window-setup-function 'ediff-setup-windows-plain)
 ;; diffのバッファを上下ではなく左右に並べる
-(setq ediff-split-window-function 'split-window-horizontally)
+(defvar ediff-split-window-function 'split-window-horizontally)

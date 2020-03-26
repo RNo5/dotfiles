@@ -103,8 +103,16 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; NSIS-mode: https://github.com/mattfidler/nsis-mode
+;; makefile-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-package nsis-mode
+(use-package makefile-gmake-mode
     :defer t)
+
+(use-package makefile-gmake-mode
+  :defer t
+  :commands makefile-gmake-mode
+  :init
+  (add-to-list 'auto-mode-alist '("make\\." . makefile-gmake-mode))
+  (add-to-list 'auto-mode-alist '("\\.make\\'" . makefile-gmake-mode))
+  :config)
