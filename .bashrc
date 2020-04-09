@@ -39,7 +39,7 @@ export PYTHONPATH=$HOME/usr/lib/python3.6/site-packages:$PYTHONPATH
 #ifconfig等へのパス
 export PATH=$PATH:/sbin/
 
-# global, gtags, 
+# global, gtags,
 # export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 
@@ -54,19 +54,20 @@ export GTAGSLABEL=pygments
 alias emacs='TERM=xterm-256color emacs -nw'
 
 # change colors for ls command
-# if [ -f $HOME/.dir_colors ] &&  type -P dircolors >/dev/null ; then 
-#     eval 'dircolors -b $HOME/.dir_colors >/dev/null'
-# fi
-export LS_COLORS='di=00;33'
+#DIRCOLORS_FILE=$HOME/dotfiles/dircolors.256dark
+DIRCOLORS_FILE=$HOME/dotfiles/dircolors.ansi-dark
+if [ -f $DIRCOLORS_FILE ] &&  type -P dircolors >/dev/null ; then
+    eval `dircolors -b $DIRCOLORS_FILE`
+else
+    export LS_COLORS='di=00;33'
+fi
 alias la='ls -lah --color=always'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-which emacs > /dev/null 2>&1
-if [ $? == 0 ]; then
+if type -P emacs >/dev/null ; then
     export EDITOR=emacs
 fi
-
 
 
 # screenの各ウィンドウのタイトルを，コマンド実行中はそのコマンド名に自動で設定し
@@ -75,7 +76,6 @@ fi
 if [ -n "$STY" ]; then
     export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
     export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename "$(pwd)")\033\\"'
-#    export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename $(pwd))\033\\"'
 else
     export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
 fi
@@ -102,4 +102,6 @@ export DISPLAY=localhost:0.0
 
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if type -P rbenv >/dev/null ; then
+    eval "$(rbenv init -)"
+fi
