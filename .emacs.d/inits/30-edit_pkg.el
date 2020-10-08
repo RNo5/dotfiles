@@ -2,7 +2,7 @@
 
   :init
   (anzu-mode +1)
-  
+
   :bind
 ;;  ("C-c r" . anzu-query-replace-regexp)
 ;;  ("C-c R" . anzu-query-replace-regexp)
@@ -15,7 +15,7 @@
 (use-package visual-regexp
 
   :init
-  
+
   :bind
   ("C-c r" . vr/replace)
   ("C-c q" . vr/query-replace)
@@ -54,3 +54,7 @@
 ;;       ("i"   . 'mc/insert-numbers)
 ;;       ("o"   . 'mc/sort-regions)
 ;;       ("O"   . 'mc/reverse-regions))))
+
+;; (use-package csv
+;;   :init
+;;   )

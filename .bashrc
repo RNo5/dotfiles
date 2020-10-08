@@ -24,7 +24,18 @@ fi
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
 
-LD_LIBRARY_PATH=$HOME/usr/lib64/:$HOME/usr/lib/$LD_LIBRARY_PATH
+#ifconfig等へのパス
+export PATH=$PATH:/sbin/
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+if type -P rbenv >/dev/null ; then
+    eval "$(rbenv init -)"
+fi
+
+export PATH="$HOME/work/pcutools/tools/:$PATH"
+
+
+LD_LIBRARY_PATH=$HOME/usr/lib64/:$HOME/usr/lib/$LD_LIBRARY_PATH:/usr/local/lib
 export LD_LIBRARY_PATH
 
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/usr/lib64/pkgconfig/:$HOME/usr/lib/pkgconfig/
@@ -36,8 +47,6 @@ export PYTHONPATH=$HOME/usr/lib/python2.7/site-packages:$PYTHONPATH
 export PYTHONPATH=$HOME/usr/lib/python3.4/site-packages:$PYTHONPATH
 export PYTHONPATH=$HOME/usr/lib/python3.6/site-packages:$PYTHONPATH
 
-#ifconfig等へのパス
-export PATH=$PATH:/sbin/
 
 # global, gtags,
 # export GTAGSCONF=/usr/local/share/gtags/gtags.conf
@@ -98,10 +107,4 @@ alias netstat='cocot netstat'
 fi
 
 # X server for WSL
-export DISPLAY=localhost:0.0
-
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-if type -P rbenv >/dev/null ; then
-    eval "$(rbenv init -)"
-fi
+#export DISPLAY=localhost:0.0

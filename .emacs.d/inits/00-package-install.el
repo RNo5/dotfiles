@@ -20,6 +20,7 @@
 ;;(el-get-bundle expand-region)
 ;;(el-get-bundle multiple-cursors)
 ;;(el-get-bundle smartrep)
+;;(el-get-bundle csv-mode)
 
 
 ;; ============================================================
