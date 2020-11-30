@@ -48,10 +48,28 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-(setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-        ("melpa" . "http://melpa.org/packages/")
-        ("org" . "http://orgmode.org/elpa/")))
+;; (setq package-archives
+;;       '(("gnu" . "http://elpa.gnu.org/packages/")
+;;         ("melpa" . "http://melpa.org/packages/")
+;;         ("org" . "http://orgmode.org/elpa/")))
+
+
+
+(setq
+ ;; Configure GNU/Emacs package repositories.
+ package-archives
+ '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+   ("MELPA Stable" . "http://stable.melpa.org/packages/")
+   ("MELPA"        . "http://melpa.org/packages/")
+   ("org"          . "http://orgmode.org/elpa/")
+   ("marmalade"    . "http://marmalade-repo.org/packages/"))
+ ;; Prefer MELPA Stable over GNU over MELPA.
+ package-archive-priorities
+ '(("MELPA Stable" . 20)
+   ("GNU ELPA"     . 15)
+   ("MELPA"        . 10)
+   ("org"          . 5)
+   ("marmalade"    . 0)))
 
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
@@ -135,7 +153,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(case-fold-search t)
+ '(case-fold-search nil)
  '(custom-safe-themes
    (quote
     ("f7cee32b1eda171e5bb53746a0a83a02bf9e306adc30793e0c393dae5f3c643d" default)))

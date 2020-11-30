@@ -72,7 +72,7 @@
   ;;  (setq ggtags-completing-read-function nil)
 
   ;; use eldoc
-  (setq-local eldoc-documentation-function #'ggtags-eldoc-function)
+  ;;  (setq-local eldoc-documentation-function #'ggtags-eldoc-function)
 
   ;; imenu
   (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
@@ -105,10 +105,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; makefile-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(use-package makefile-gmake-mode
-    :defer t)
-
 (use-package makefile-gmake-mode
   :defer t
   :commands makefile-gmake-mode
@@ -116,3 +112,21 @@
   (add-to-list 'auto-mode-alist '("make\\." . makefile-gmake-mode))
   (add-to-list 'auto-mode-alist '("\\.make\\'" . makefile-gmake-mode))
   :config)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; google-c-style
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package google-c-style
+    :defer t
+    :config
+    :init
+    (require 'google-c-style)
+    (defun cc-mode-init ()
+      (google-set-c-style)
+      (setq indent-tabs-mode nil)
+;      (setq c-basic-offset 4)
+;      (c-set-offset 'case-label 0)
+      )
+    (add-hook 'c-mode-hook 'cc-mode-init)
+    (add-hook 'c++-mode-hook 'cc-mode-init)
+    )
