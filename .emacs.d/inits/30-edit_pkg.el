@@ -58,3 +58,20 @@
 ;; (use-package csv
 ;;   :init
 ;;   )
+
+
+;; ;; CSV mode config
+;; (use-package csv-mode
+;;   :ensure t
+;;   :mode "\\.csv$"
+;;   :init)
+
+;; csv-mode
+(use-package csv-mode
+  :defer t
+;  :ensure t
+  :init
+  :config
+  (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+  (autoload 'csv-mode "csv-mode"
+      "Major mode for editing comma-separated value files." t))

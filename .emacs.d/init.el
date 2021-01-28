@@ -40,25 +40,15 @@
 ;;(let ((win (get-buffer-window "*Compile-Log*")))
 ;;    (when win (delete-window win)))
 
-;; emacs directory. load-path で ~/.emacs.d とか書かなくてよくなる
-;; emacs -l init.el : change the directory for user-emacs-directory
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-;; (setq package-archives
-;;       '(("gnu" . "http://elpa.gnu.org/packages/")
-;;         ("melpa" . "http://melpa.org/packages/")
-;;         ("org" . "http://orgmode.org/elpa/")))
-
-
-
 (setq
  ;; Configure GNU/Emacs package repositories.
  package-archives
- '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+ '(("GNU ELPA"     . "http://elpa.gnu.org/packages/")
    ("MELPA Stable" . "http://stable.melpa.org/packages/")
    ("MELPA"        . "http://melpa.org/packages/")
    ("org"          . "http://orgmode.org/elpa/")
@@ -127,6 +117,9 @@
   (setq el-get-dir (expand-file-name "el-get" package-installed-dir)
         package-user-dir (expand-file-name "elpa" package-installed-dir)))
 
+;;; ディレクトリをサブディレクトリごとload-pathに追加
+(add-to-load-path "installed-packages")
+
 (require 'el-get)
 
 ;; ============================================================
@@ -157,7 +150,8 @@
  '(custom-safe-themes
    (quote
     ("f7cee32b1eda171e5bb53746a0a83a02bf9e306adc30793e0c393dae5f3c643d" default)))
- '(delete-selection-mode nil))
+ '(delete-selection-mode nil)
+ '(package-selected-packages (quote (csv-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

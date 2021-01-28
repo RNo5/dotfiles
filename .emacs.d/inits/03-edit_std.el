@@ -37,7 +37,7 @@
                            ))
   (setq whitespace-display-mappings
           '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
-  (global-whitespace-mode 1)
+;;  (global-whitespace-mode 1)
   :bind
   ("C-c w" . whitespace-mode))
 
