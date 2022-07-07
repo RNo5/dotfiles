@@ -12,3 +12,9 @@
 
 ;;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
+
+
+(progn
+  (bind-key  "C-c R"       'revert-buffer)
+  (bind-key  "M-<left>"    'bs-cycle-previous)
+  (bind-key  "M-<right>"   'bs-cycle-next))
