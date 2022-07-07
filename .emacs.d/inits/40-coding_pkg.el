@@ -114,6 +114,18 @@
   :config)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; nsis-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package nsis-mode
+  :defer t
+  :commands nsis-mode
+  :init
+  (add-to-list 'auto-mode-alist '("\\.nsh\\'" . nsis-mode))
+  (add-to-list 'auto-mode-alist '("\\.nsi\\'" . nsis-mode))
+  :config)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; google-c-style
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package google-c-style
