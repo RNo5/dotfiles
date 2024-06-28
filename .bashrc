@@ -1,14 +1,8 @@
 # .bashrc for interactive terminal (for example, sftp)
-[ -z "$PS1" ] && return
+[ -z "$PS1" ] &&  return
 
 #stop terminal output lock (Ctrl + S)
 stty stop undef
-
-export SCREENDIR=$HOME/.screen
-
-# screen自動起動
-# すでに screen セッションがある場合そこに接続し、なければ作成する。
-screen -xR
 
 HISTSIZE=10000
 HISTFILESIZE=10000
@@ -79,15 +73,26 @@ if type -P emacs >/dev/null ; then
 fi
 
 
+export SCREENDIR=$HOME/.screen
+
+# screen自動起動
+# すでに screen セッションがある場合そこに接続し、なければ作成する。
+screen -xR
+
 # screenの各ウィンドウのタイトルを，コマンド実行中はそのコマンド名に自動で設定し
 # そうでなければ現在の作業ディレクトリ名に自動で設定する．
 ## .bashrc側の設定 (.screenrcの設定も必要)
 if [ -n "$STY" ]; then
-    export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
     export PROMPT_COMMAND='echo -ne "\033k\033\0134\033k$(basename "$(pwd)")\033\\"'
+    export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
+    # for tabby to get the current dir when using sftp
+    # export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]'
 else
     export PS1='\[\e[0;36m\]\u@\h:\W\$ \[\e[00m\]'
+    # for tabby to get the current dir when using sftp
+    # export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]'
 fi
+
 
 
 
@@ -108,3 +113,7 @@ fi
 
 # X server for WSL
 #export DISPLAY=localhost:0.0
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
